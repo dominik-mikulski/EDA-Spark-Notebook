@@ -1,0 +1,18 @@
+services:
+  spark_eda_notebook:
+    container_name: spark_eda_notebook
+    image: jupyter/pyspark-notebook:x86_64-ubuntu-22.04
+    ports:
+      - 8900:8888
+      - "4050-4059:4040-4049"
+    volumes:
+      - ..:/home/jovyan/work
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+      PYTHONPATH: /home/jovyan/work/src
+    command: >
+      bash -c "pip install pytest && start-notebook.sh --IdentityProvider.token='' --IdentityProvider.password=''"
+      
+      
+      
+      

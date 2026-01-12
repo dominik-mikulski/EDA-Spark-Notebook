@@ -1,0 +1,73 @@
+# ───────────────────────────────
+# Python / packaging
+# ───────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.mypy_cache/
+.pytest_cache/
+.hypothesis/
+
+# ───────────────────────────────
+# IDE / editors
+# ───────────────────────────────
+.idea/
+.vscode/
+*.sublime-*
+*.swp
+*.swo
+*~
+
+# ───────────────────────────────
+# OS junk
+# ───────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ───────────────────────────────
+# Project-specific
+# ───────────────────────────────
+# Keep data folder but ignore bigger files & temps
+data/*.parquet
+data/*.delta
+data/tmp/
+data/output/
+
+# env variables and secrets
+.env
+*.env
+secrets/
+credentials/
+keys/*
+!keys/.gitkeep
+
+# Docker artifacts
+.docker/
+
+# Jupyter temp files ignore
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+Untitled.ipynb
+
+# Python temp files ignore
+*.pyc
